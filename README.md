@@ -4,6 +4,8 @@ To be further developed so that other users can create an account and write thei
 
 Uses my Stockholm University database to store users, posts and categories. Apache and MySQL has been used to develop this.
 
-To log in:
+TO LOG IN
+
 Username: jennifer
+
 Password: password
