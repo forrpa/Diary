@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="design.css">
+        <meta charset="utf-8">
+        <meta name="author" content="Jennifer McCarthy"/>
+        <meta name="description" content="Categories"/>
+        <meta name="generator" content="Notepad++ 7.8.3"/>
+        <meta name="keywords" content="categories, diary, personal"/>
+        <meta name="robots" content="noindex"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Categories</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Old+Standard+TT">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="scripts/jquery-3.5.1.js"></script>
+        <script src="scripts/show-categories.js"></script>
+        <script src="scripts/jquery-functions.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <header class="header">
+                <nav class="nav">
+                    <ul>
+                        <li><a class="headerlink" href="home.php"><i class="fas fa-home"></i> Home</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn" id="catBtn"><i class="fas fa-cat"></i> Categories</button>
+                                <div class="dropdown-content">
+                                    <ul id="catUl">
+                                        <!--===categories===-->
+                                        <li class="headerCat" id="headerLi"><a id="catLink" href="categories.php?catID=---cat-id---">---category---</a></li>
+                                        <!--===categories===-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a class="headerlink" href="writepost.php"><i class="fas fa-pen-square"></i> Write post</a></li>
+                        <li><a class="headerlink" href="profile.php"><i class="fas fa-user-circle"></i> Profile</a></li>
+                        <li><a class="headerlink" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </nav>
+                <h1 id="headerText"><span id="pink"></span><span id="black"></span></h1>
+            </header>
+
+            <div class="row">
+                <section>
+                    <div class="articles">
+                            <!--===entries===-->
+                        <article>
+                            <header class="articleheader">
+                                <h5>---date---</h5>
+                                <h1>---title---</h1>
+                                <hr>
+                            </header>
+                            <div class="content">
+                                <p>---content---</p>
+                                <p><em><span class="xoxo">Xoxo</span></em> 🖤</p>
+                            </div>
+                            <footer class="articlefooter">
+                                <div class="left"><span id="footerCategory">Category:</span>
+                                    <a id="footerLink" class="contactlink"
+                                       href="categories.php?catID=---entry-catID---">---entry-category---</a>
+                                </div>
+
+                                <div class="centered">
+                                    <div class="footerform">
+                                        <form action="editpost.php" method="post">
+                                            <input type="hidden" name="edit" value="yes">
+                                            <input type="hidden" name="postID" value="---postID---">
+                                            <input class="submitbtn" type="submit" value="EDIT POST"></form>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="footerform">
+                                        <form action="home.php" method="post">
+                                            <input type="hidden" name="delete" value="yes">
+                                            <input type="hidden" name="postID" value="---postID---">
+                                            <input id="deleteBtn" class="submitbtn" type="submit" value="DELETE POST"></form>
+                                    </div>
+                                </div>
+                            </footer>
+                            <br>
+                        </article>
+                        <br>
+                            <!--===entries===-->
+                        <br>
+                        <footer>
+                            <p>End of posts</p>
+                        </footer>
+                    </div>
+                </section>
+
+                <aside>
+                    <br>
+                    <figure>
+                        <img src="images/asidebild.png" alt="Picture of me" id="asideImg" title="This is a picture of me." height="250" width="250">
+                    </figure>
+                    <p id="asideText">This goofy picture is my best memory from Mallorca 2018, me and Martin playing in the pool. I will try and post this kind of cute (but private) photos!</p>
+                    <p>This is my private diary where I can write <span id="whatever">whatever I want</span></p>
+                    <p></p>
+                    <h4>Social media shortcuts</h4>
+                    <hr class="asidehr">
+                    <div class="socialmedia">
+                        <a href="https://www.facebook.com" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
+                        <a href="https://myaccount.google.com/" class="fa fa-google" target="_blank"></a>
+                        <a href="https://www.youtube.com/" class="fa fa-youtube" target="_blank"></a>
+                        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+                    </div>
+                    <br>
+                    <h4>Instagram for inspiration</h4>
+                    <hr class="asidehr">
+                    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+                    <div class="instagramcontainer">
+                        <iframe src="https://snapwidget.com/embed/804019" class="instagram-widget" width="300"
+                                height="250"></iframe>
+                    </div>
+                    <h4>Pinterest for inspiration</h4>
+                    <hr class="asidehr">
+                    <a data-pin-do="embedBoard" data-pin-lang="en" data-pin-board-width="150" data-pin-scale-height="400"
+                       data-pin-scale-width="300" href="https://www.pinterest.se/Forrpa/home-interior/"></a>
+                    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+                </aside>
+            </div>
+
+            <footer class="footer">
+                <details>
+                    <summary>&copy; 2020 Jennifer McCarthy • All Rights Reserved</summary>
+                    <p>All content and graphics on this web site are the property of Jennifer McCarthy.</p>
+                </details>
+            </footer>
+        </div>
+    </body>
+</html>
